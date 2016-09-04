@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap-treeview/bootstrap-treeview.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="head">
+      <h1>noteBook</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="main_left">
+          <div id="tree"></div>
+        </div>
+        <div class="main_right">
+          <div>
+            <textarea id="wysiwyg" rows="6" cols="50"></textarea>
+          </div>
+        </div>
+    </div>
+    <div class="foot">
+      <h6>Copyright (c) 2016 Copyright liuxin All Rights Reserved.</h6>
+    </div>
+    <script src="../jquery/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script src="../wysiwyg/bootstrap-wysiwyg.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $('#editor').wysiwyg();
+        function getTree() {
+          var tree = [
+{
+  text: "Parent 1",
+  nodes: [
+    {
+      text: "Child 1",
+      nodes: [
+        {
+          text: "Grandchild 1"
+        },
+        {
+          text: "Grandchild 2"
+        }
+      ]
+    },
+    {
+      text: "Child 2"
+    }
+  ]
+},
+{
+  text: "Parent 2"
+},
+{
+  text: "Parent 3"
+},
+{
+  text: "Parent 4"
+},
+{
+  text: "Parent 5"
+}
+];
+            return tree;
+        }
+
+        $('#tree').treeview({data: getTree()});
+      })
+    </script>
+  </body>
+</html>

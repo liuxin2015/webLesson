@@ -1,0 +1,23 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.head h1{
+  text-align: center;
+}
+.main_left{
+  float: left;
+  width: 20%;
+}
+.main_right{
+  border: 1px solid blue;
+  float: left;
+  width: 80%;
+  height: 500px;
+}
+ #editor {
+   overflow:scroll; max-height:300px
+ }
+.foot h6{
+  text-align: center;
+}
